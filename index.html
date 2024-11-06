@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game News</title>
+    <link rel="stylesheet" href="idx.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: hwb(0 17% 79%); /* Cinza mais escuro */
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px;
+        }
+        .headline {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        .headline h1 {
+            font-size: 3em;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .headline h1::after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 5px;
+            background-color: #ffc0cb;
+            position: absolute;
+            bottom: -10px;
+            left: 25%;
+        }
+        .headline h2 {
+            font-size: 1.5em;
+            color: #333;
+        }
+        .headline img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .headline img:hover {
+            transform: scale(1.05); /* Zoom suave na imagem */
+        }
+        .news-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .news-column {
+            padding: 10px;
+            background-color: #ffc0cb; /* Cor rosa */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 5px;
+        }
+        .news-column:hover {
+            transform: scale(1.05); /* Expande levemente */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+        }
+        .news-with-image {
+            margin-bottom: 20px;
+        }
+        .news-with-image img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .news-with-image img:hover {
+            transform: scale(1.05); /* Zoom leve na imagem */
+        }
+        h1, h2 {
+            margin: 0 0 10px;
+        }
+        h2 a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        h2 a:hover {
+            color: #555; /* Cor ao passar o mouse */
+        }
+        p {
+            margin: 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Manchete principal -->
+        <div class="headline">
+            <h1>Game News</h1>
+            <h2><a href="#">Resident Evil 9 pode ter Leon e Jill como protagonistas e deve se passar 4 anos após o Resident Evil Village</a></h2>
+            <img src="./img/res9.webp" alt="Resident Evil 9">
+        </div>
+
+        <!-- Conteúdo de Notícias -->
+        <div class="news-container">
+            <!-- Coluna 1: Notícias com imagem -->
+            <div class="news-column">
+                <div class="news-with-image">
+                    <h2><a href="#">Nintendo Switch "2" será lançado em 2025?</a></h2>
+                    <p>Rumores apontam que o novo console da Nintendo será lançado em 2025, com atualizações significativas de hardware.</p>
+                    <img src="./img/nintendo.jpg" alt="Nintendo Switch 2">
+                </div>
+                <div class="news-with-image">
+                    <h2><a href="#">Novo trailer de GTA VI</a></h2>
+                    <p>A nova produção da Rockstar promete muitas novidades.</p>
+                    <img src="./img/gta-6.jpg" alt="GTA VI">
+                </div>
+                <div class="news-with-image">
+                    <h2><a href="#">Monster Hunter Wilds abre beta para PC</a></h2>
+                    <p>O novo jogo da franquia promete muitas novidades e já está disponível para testes.</p>
+                    <img src="./img/mh- wilds.jpg" alt="Monster Hunter Wilds">
+                </div>
+            </div>
+
+            <!-- Coluna 2: Notícias sem imagem -->
+            <div class="news-column">
+                <h2><a href="#">Evento especial de Overwatch 2 revelado</a></h2>
+                <p>A Blizzard anuncia novas skins e eventos para o popular jogo de tiro.</p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <h2><a href="#">God of War Ragnarok ganha prêmio de melhor jogo do ano</a></h2>
+                <p>A saga de Kratos continua conquistando fãs e prêmios.</p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <h2><a href="#">Elden Ring recebe nova atualização</a></h2>
+                <p>Novos conteúdos e melhorias para o RPG da FromSoftware.</p>
+            </div>
+
+            <!-- Coluna 3: Notícias sem imagem -->
+            <div class="news-column">
+                <h2><a href="#">Atualização de Cyberpunk 2077 traz novas missões</a></h2>
+                <p>O jogo da CD Projekt Red segue recebendo melhorias e conteúdos adicionais.</p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+                <h2><a href="#">Street Fighter 6 lança novo personagem</a></h2>
+                <p>A Capcom apresenta o mais novo personagem jogável para sua franquia de luta.</p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <h2><a href="#">Assassin’s Creed Mirage é anunciado</a></h2>
+                <p>Ubisoft revela detalhes do próximo título da série de sucesso.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
